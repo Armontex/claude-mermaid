@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mermaid viewer demo</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { margin: 0; padding: 16px; font-family: system-ui, sans-serif; background: #fff; color: #3d3d3a; }
+  @media (prefers-color-scheme: dark) { body { background: #262624; color: #c2c0b6; } }
+</style>
+</head>
+<body>
+<div id="d"></div>
+<script type="module">
+import view from '../viewer/view.js';
+
+view('d', `flowchart LR
+    U["Storefront<br/>search, product pages"]:::ok
+    C["Cart<br/>items, coupons"]:::ok
+    A["Accounts<br/>sign-in, addresses"]:::ok
+    K["Checkout<br/>shipping, totals"]:::ours
+    P{"Payment"}:::ours
+    G["Card gateway"]:::blocked
+    I["Invoice<br/>for companies"]:::none
+    W["Warehouse<br/>pick and pack"]:::warn
+    M["Receipt e-mail"]:::none
+    U --> C -->|proceed| K
+    A -->|address| K --> P
+    P -->|card| G -->|paid| W
+    P -->|invoice| I -.->|paid later| W
+    W -->|shipped| M`);
+</script>
+</body>
+</html>
