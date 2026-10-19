@@ -1,0 +1,15 @@
+{
+  "name": "mermaid-canvas",
+  "version": "0.1.0",
+  "description": "Mermaid diagrams in the Claude Code desktop chat: rendered inline with zoom, pan, themes and a source view.",
+  "author": {
+    "name": "Armontex",
+    "url": "https://github.com/Armontex"
+  },
+  "mcpServers": {
+    "mermaid-canvas": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/mcp/server.mjs"]
+    }
+  }
+}

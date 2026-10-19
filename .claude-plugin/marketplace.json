@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "mermaid-canvas",
+  "description": "Mermaid diagrams rendered inline in the Claude Code desktop chat.",
+  "owner": {
+    "name": "Armontex",
+    "url": "https://github.com/Armontex"
+  },
+  "plugins": [
+    {
+      "name": "mermaid-canvas",
+      "description": "Draws mermaid diagrams as zoomable, themed widgets instead of plain code blocks.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}
