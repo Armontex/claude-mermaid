@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>MCP App host</title></head>
+<!-- A stand-in for the chat: frames dist/viewer.html the way an MCP Apps host does.
+     Real hosts frame apps on a sandbox origin of their own; allow-same-origin stands in for it. -->
+<body style="margin:24px;font:15px system-ui">
+<p>Text before the diagram.</p>
+<iframe id="app" title="Diagram" sandbox="allow-scripts allow-same-origin" src="../dist/viewer.html" style="width:100%;height:120px;border:0"></iframe>
+<p>Text after the diagram.</p>
+<script>
+const frame = document.getElementById('app');
+const theme = new URLSearchParams(location.search).get('theme') ?? 'dark';
+document.documentElement.style.colorScheme = theme;
+Object.assign(document.body.style, theme === 'dark' ? { background: '#262624', color: '#e5e5e2' } : { background: '#faf9f5', color: '#3d3d3a' });
+const SRC = `flowchart LR
+  Cart[Cart]:::ok --> Checkout[Checkout]:::ours
+  Auth[Sign-in]:::ok --> Checkout
+  Checkout --> Pay{Payment}:::ours
+  Pay -->|card| Gateway[Card gateway]:::blocked
+  Pay -->|invoice| Invoice[Invoice]:::none
+  Gateway --> Receipt[Receipt e-mail]:::warn
+  Invoice --> Receipt`;
+const post = (message) => frame.contentWindow.postMessage({ jsonrpc: '2.0', ...message }, '*');
+addEventListener('message', ({ source, data }) => {
+  if (source !== frame.contentWindow) return;
+  if (data.method === 'ui/initialize') post({ id: data.id, result: { protocolVersion: '2025-11-21', hostContext: { theme } } });
+  if (data.method === 'ui/notifications/initialized') post({ method: 'ui/notifications/tool-input', params: { arguments: { source: SRC } } });
+  if (data.method === 'ui/notifications/size-changed') frame.style.height = `${data.params.height}px`;
+});
+</script>
+</body>
+</html>
