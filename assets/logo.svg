@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="mermaid-canvas">
+  <defs>
+    <pattern id="dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="6" cy="6" r="1.2" fill="#ffffff" fill-opacity=".14"/>
+    </pattern>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="#1c1c1f"/>
+  <rect width="128" height="128" rx="28" fill="url(#dots)"/>
+  <path d="M42 46 C58 46 52 64 66 64 M42 82 C58 82 52 64 66 64 M86 64 h10" fill="none" stroke="#e4e4e7" stroke-width="4" stroke-linecap="round"/>
+  <rect x="18" y="35" width="26" height="22" rx="5" fill="#16351f" stroke="#4ade80" stroke-width="3.5"/>
+  <rect x="18" y="71" width="26" height="22" rx="5" fill="#3a2a0a" stroke="#fbbf24" stroke-width="3.5"/>
+  <rect x="64" y="51" width="22" height="26" rx="5" fill="#0f2a44" stroke="#60a5fa" stroke-width="3.5"/>
+  <circle cx="105" cy="64" r="8" fill="#3b1414" stroke="#f87171" stroke-width="3.5"/>
+</svg>
