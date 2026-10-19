@@ -1,0 +1,16 @@
+{
+  "name": "claude-mermaid",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "biome check .",
+    "format": "biome check --write .",
+    "test": "node --test",
+    "check": "biome ci . && node --test",
+    "build": "node scripts/build.mjs"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.15",
+    "esbuild": "0.25.11"
+  }
+}
