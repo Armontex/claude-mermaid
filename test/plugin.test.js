@@ -21,6 +21,10 @@ test('README points at the tag of the plugin version', () => {
   for (const tag of tags) assert.equal(tag, `v${plugin.version}`);
 });
 
+test('the viewer introduces itself to the host with the plugin version', () => {
+  assert.match(read('viewer/app.js'), new RegExp(`version: '${plugin.version}'`));
+});
+
 test('the session hook speaks only in the desktop app', () => {
   const run = (entrypoint) =>
     spawnSync('node', ['hooks/session-start.mjs'], { env: { ...process.env, CLAUDE_CODE_ENTRYPOINT: entrypoint } });

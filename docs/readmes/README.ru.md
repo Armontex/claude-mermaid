@@ -19,7 +19,7 @@
   <a href="https://mermaid.js.org/"><img alt="Mermaid 12.2" src="https://img.shields.io/badge/Mermaid-12.2-FF3670?logo=mermaid&amp;logoColor=white" /></a>
   <a href="https://modelcontextprotocol.io/"><img alt="MCP Apps" src="https://img.shields.io/badge/MCP-Apps-3B82F6" /></a>
   <a href="../../LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/License-MIT-22A699.svg" /></a>
-  <a href="#состояние-проекта"><img alt="Early" src="https://img.shields.io/badge/Status-Early-F4A261" /></a>
+  <a href="#состояние-проекта"><img alt="Stable" src="https://img.shields.io/badge/Status-Stable-2EA043" /></a>
 </p>
 
 <p>
@@ -163,7 +163,7 @@ flowchart LR
 ```html
 <div id="d"></div>
 <script type="module">
-  import view from 'https://cdn.jsdelivr.net/gh/Armontex/claude-mermaid@v0.1.0/viewer/view.js';
+  import view from 'https://cdn.jsdelivr.net/gh/Armontex/claude-mermaid@v1.0.0/viewer/view.js';
   view('d', `flowchart LR
     A:::ok --> B:::blocked`);
 </script>
@@ -171,8 +171,8 @@ flowchart LR
 
 ## Состояние проекта
 
-mermaid-canvas в начале пути: `0.1.0` — первая версия, которая рисует в
-приложении.
+`1.0.0` — первый стабильный релиз: холст рисуется в десктопном приложении, а
+инструмент, его вход и классы статусов не меняются до `2.0`.
 
 | Где                                  | Что получится                                             |
 | ------------------------------------ | --------------------------------------------------------- |

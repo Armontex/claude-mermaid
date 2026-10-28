@@ -1,6 +1,6 @@
 {
   "name": "mermaid-canvas",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Mermaid diagrams in the Claude Code desktop chat: rendered inline with zoom, pan, themes and a source view.",
   "author": {
     "name": "Armontex",

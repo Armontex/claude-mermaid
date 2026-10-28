@@ -42,5 +42,5 @@ new ResizeObserver(() => {
 send({
   id: 1,
   method: 'ui/initialize',
-  params: { protocolVersion: '2025-11-21', appInfo: { name: 'mermaid-canvas', version: '0.1.0' }, appCapabilities: {} },
+  params: { protocolVersion: '2025-11-21', appInfo: { name: 'mermaid-canvas', version: '1.0.0' }, appCapabilities: {} },
 });

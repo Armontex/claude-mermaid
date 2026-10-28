@@ -19,7 +19,7 @@
   <a href="https://mermaid.js.org/"><img alt="Mermaid 12.2" src="https://img.shields.io/badge/Mermaid-12.2-FF3670?logo=mermaid&amp;logoColor=white" /></a>
   <a href="https://modelcontextprotocol.io/"><img alt="MCP Apps" src="https://img.shields.io/badge/MCP-Apps-3B82F6" /></a>
   <a href="LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/License-MIT-22A699.svg" /></a>
-  <a href="#project-status"><img alt="Early" src="https://img.shields.io/badge/Status-Early-F4A261" /></a>
+  <a href="#project-status"><img alt="Stable" src="https://img.shields.io/badge/Status-Stable-2EA043" /></a>
 </p>
 
 <p>
@@ -162,7 +162,7 @@ The viewer is a plain ES module and works on any page:
 ```html
 <div id="d"></div>
 <script type="module">
-  import view from 'https://cdn.jsdelivr.net/gh/Armontex/claude-mermaid@v0.1.0/viewer/view.js';
+  import view from 'https://cdn.jsdelivr.net/gh/Armontex/claude-mermaid@v1.0.0/viewer/view.js';
   view('d', `flowchart LR
     A:::ok --> B:::blocked`);
 </script>
@@ -170,7 +170,8 @@ The viewer is a plain ES module and works on any page:
 
 ## Project status
 
-mermaid-canvas is early: `0.1.0` is the first version that draws in the app.
+`1.0.0` is the first stable release: the canvas draws in the desktop app, and
+the tool, its input and the status classes stay as they are until a `2.0`.
 
 | Where                            | What you get                                              |
 | -------------------------------- | --------------------------------------------------------- |
